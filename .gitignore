@@ -102,3 +102,4 @@ InitTestScene*.unity*
 .vscode/settings.json
 BCIJam_2026.slnx
 CLAUDE.md
+.claude/settings.local.json
