@@ -176,27 +176,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2140182934247305369}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: HandlePress
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: CharacterAbilityButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6455027018449245609, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: mouseDownEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -239,8 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e970e63bee60845bad2793c7d37f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAbilityButton
+  GameManager: {fileID: 0}
   ButtonText: {fileID: 4968708634371683631}
-  TargetBattleCharacter: {fileID: 0}
+  PlayerBattleCharacter: {fileID: 0}
+  EnemyBattleCharacter: {fileID: 0}
   AbilityIndex: 0
 --- !u!114 &4968708634371683631 stripped
 MonoBehaviour:

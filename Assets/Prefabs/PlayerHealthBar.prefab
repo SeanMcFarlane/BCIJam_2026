@@ -392,7 +392,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8081971270646952}
   - component: {fileID: 4249968783507121761}
-  - component: {fileID: 4232789552525088488}
   m_Layer: 5
   m_Name: PlayerHealthBar
   m_TagString: Untagged
@@ -470,28 +469,6 @@ MonoBehaviour:
   controlDiscRadius: 0
   controlDiscThickness: 0
   discThicknessScale: 0
---- !u!95 &4232789552525088488
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2549445383742405323}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20175272c14ef384988926cf35313d7c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3793062452765993196
 GameObject:
   m_ObjectHideFlags: 0

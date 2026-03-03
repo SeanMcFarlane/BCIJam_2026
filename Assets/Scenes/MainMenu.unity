@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: -4913637463156679144, guid: 65eb82dda5212f2448aff7de410823bd, type: 2}
     - target: {fileID: 1797474261770595592, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.895494
+      value: 4.4469814
       objectReference: {fileID: 0}
     - target: {fileID: 1797474261770595592, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -171,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347067585688816642, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.895494
+      value: 4.4469814
       objectReference: {fileID: 0}
     - target: {fileID: 5347067585688816642, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -179,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6204130249317908161, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.895494
+      value: 4.4469814
       objectReference: {fileID: 0}
     - target: {fileID: 6204130249317908161, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6510071413273229242, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: m_Size.x
-      value: 4.895494
+      value: 4.4469814
       objectReference: {fileID: 0}
     - target: {fileID: 6510071413273229242, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: m_Size.y
@@ -455,7 +455,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 100
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -1020,7 +1020,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 110
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -1215,7 +1215,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 101
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -1297,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: -4913637463156679144, guid: 65eb82dda5212f2448aff7de410823bd, type: 2}
     - target: {fileID: 1797474261770595592, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.8954926
+      value: 4.4469824
       objectReference: {fileID: 0}
     - target: {fileID: 1797474261770595592, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -1351,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347067585688816642, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.8954926
+      value: 4.4469824
       objectReference: {fileID: 0}
     - target: {fileID: 5347067585688816642, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -1359,7 +1359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6204130249317908161, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: width
-      value: 4.8954926
+      value: 4.4469824
       objectReference: {fileID: 0}
     - target: {fileID: 6204130249317908161, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: height
@@ -1487,7 +1487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6510071413273229242, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: m_Size.x
-      value: 4.8954926
+      value: 4.4469824
       objectReference: {fileID: 0}
     - target: {fileID: 6510071413273229242, guid: 269572393bf885742a4dd20168bb2590, type: 3}
       propertyPath: m_Size.y
@@ -1639,7 +1639,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 1001
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 79d3275234470084d88484ee3890a040, type: 3}
@@ -2026,7 +2026,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1989333859
-  m_SortingLayer: 0
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 37b8b3b894b11344a9935ac744012670, type: 3}
@@ -2507,7 +2507,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 110
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -2642,7 +2642,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1989333859
-  m_SortingLayer: 0
+  m_SortingLayer: -1
   m_SortingOrder: -9999
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -2889,7 +2889,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1788295829
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 110
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
