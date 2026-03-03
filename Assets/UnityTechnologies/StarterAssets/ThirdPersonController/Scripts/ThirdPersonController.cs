@@ -97,6 +97,7 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private int _animIDPunching;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -159,6 +160,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Punch();
         }
 
         private void LateUpdate()
@@ -173,6 +175,7 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDPunching = Animator.StringToHash("Punching");
         }
 
         private void GroundedCheck()
@@ -353,6 +356,18 @@ namespace StarterAssets
             if (lfAngle < -360f) lfAngle += 360f;
             if (lfAngle > 360f) lfAngle -= 360f;
             return Mathf.Clamp(lfAngle, lfMin, lfMax);
+        }
+
+        private void Punch()
+        {
+            if (_input.punch)
+            {
+                if (_hasAnimator)
+                {
+                    _animator.SetTrigger(_animIDPunching);
+                }
+                _input.punch = false;
+            }
         }
 
         private void OnDrawGizmosSelected()
