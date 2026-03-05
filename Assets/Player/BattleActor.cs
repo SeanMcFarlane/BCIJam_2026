@@ -6,6 +6,7 @@ public class BattleActor : MonoBehaviour
 {
     public Transform StartPoint;
     public Transform EndPoint;
+    public EnemyActor Target;
     public float MoveSpeed = 5f;
     public float AnimationSpeed = 1f;
     public float PunchWaitTime = 0.5f;
@@ -40,8 +41,9 @@ public class BattleActor : MonoBehaviour
         yield return StartCoroutine(MoveToTarget(EndPoint.position));
         CharacterAnimator.SetFloat("Speed", 0f);
 
-        // Fire punch animation and wait
+        // Fire punch animation and notify target
         CharacterAnimator.SetTrigger("Punching");
+        Target?.TakeHit();
         yield return new WaitForSeconds(PunchWaitTime);
 
         // Turn to face StartPoint before running back
