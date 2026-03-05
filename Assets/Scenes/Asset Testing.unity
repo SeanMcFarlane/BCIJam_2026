@@ -270,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   StartPoint: {fileID: 121931796}
   EndPoint: {fileID: 1899927411}
+  Target: {fileID: 190000935}
   MoveSpeed: 15
   AnimationSpeed: 15
   PunchWaitTime: 0.5
@@ -311,6 +312,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &190000934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3862277631971027947, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
+  m_PrefabInstance: {fileID: 197816530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &190000935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190000934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed5517b0adfe1d41948ce3e88b87a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &197816530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,10 +381,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5615815007780928290, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a05eac292f5c5ae4b8edada3fb3b30be, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3862277631971027947, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 190000935}
   m_SourcePrefab: {fileID: 100100000, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
 --- !u!1 &445481148
 GameObject:
