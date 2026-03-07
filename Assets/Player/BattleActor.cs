@@ -20,6 +20,9 @@ public class BattleActor : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
         _thirdPersonController = GetComponent<ThirdPersonController>();
+
+        transform.position = StartPoint.position;
+        transform.rotation = Quaternion.LookRotation(EndPoint.position - StartPoint.position);
     }
 
     public void PerformAttack()
