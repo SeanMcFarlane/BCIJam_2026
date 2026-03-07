@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9132168047227714928}
   m_Layer: 0
-  m_Name: right_arm_3
+  m_Name: laser_right_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.439, y: 0.345, z: -4.90853}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.340508, y: 1.340508, z: 1.3405081}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6712729285791585488}
