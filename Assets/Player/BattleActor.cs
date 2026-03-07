@@ -6,7 +6,7 @@ public class BattleActor : MonoBehaviour
 {
     public Transform StartPoint;
     public Transform EndPoint;
-    public EnemyActor Target;
+    public BattleActor Target;
     public float MoveSpeed = 5f;
     public float AnimationSpeed = 1f;
     public float PunchWaitTime = 0.5f;
@@ -15,6 +15,8 @@ public class BattleActor : MonoBehaviour
 
     private CharacterController _characterController;
     private ThirdPersonController _thirdPersonController;
+
+    private static readonly int _animHit = Animator.StringToHash("Hit");
 
     void Start()
     {
@@ -62,6 +64,10 @@ public class BattleActor : MonoBehaviour
 
         _characterController.enabled = true;
         _thirdPersonController.enabled = true;
+    }
+
+    public void TakeHit() {
+        CharacterAnimator.SetTrigger(_animHit);
     }
 
     private IEnumerator RotateToFace(Vector3 target)

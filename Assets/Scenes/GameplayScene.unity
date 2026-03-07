@@ -902,7 +902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427449015}
   m_Layer: 0
-  m_Name: PlayerStart
+  m_Name: Transform_PlayerPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1474,18 +1474,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3862277631971027947, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
   m_PrefabInstance: {fileID: 1135558058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &676268081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676268080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed5517b0adfe1d41948ce3e88b87a80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &676268086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,8 +1490,12 @@ MonoBehaviour:
   CharacterName: Enemy Bot
   Health: 100
   MaxHealth: 100
-  CharacterAnimator: {fileID: 0}
-  EquippedAbilities: []
+  CharacterAnimator: {fileID: 1135558059}
+  EquippedAbilities:
+  - {fileID: 11400000, guid: 46badd1ce536c78418827f7a623df1db, type: 2}
+  - {fileID: 11400000, guid: 829ff3de69da43f4ba81eb010a3a60b7, type: 2}
+  - {fileID: 11400000, guid: e23bf1a009ce8ad47b20e8ab54ad11e6, type: 2}
+  - {fileID: 11400000, guid: 7aa9b30d6b059b74d802bf4fc279a94a, type: 2}
 --- !u!1 &910976993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,11 +2048,36 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3862277631971027947, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 676268081}
+      addedObject: {fileID: 676268086}
     - targetCorrespondingSourceObject: {fileID: 3862277631971027947, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 676268086}
+      addedObject: {fileID: 1135558060}
   m_SourcePrefab: {fileID: 100100000, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
+--- !u!95 &1135558059 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5615815007780928290, guid: 90a3c316373cde041b20f38c9359e947, type: 3}
+  m_PrefabInstance: {fileID: 1135558058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1135558060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676268080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35572ba3fd6167e47a897fac7152f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleActor
+  StartPoint: {fileID: 2068011351}
+  EndPoint: {fileID: 427449015}
+  Target: {fileID: 1322025186}
+  MoveSpeed: 5
+  AnimationSpeed: 1
+  PunchWaitTime: 0.5
+  TurnSpeed: 5
+  CharacterAnimator: {fileID: 1135558059}
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   StartPoint: {fileID: 427449015}
   EndPoint: {fileID: 2068011351}
-  Target: {fileID: 676268081}
+  Target: {fileID: 1322025186}
   MoveSpeed: 15
   AnimationSpeed: 15
   PunchWaitTime: 0.5
@@ -2232,7 +2249,7 @@ MonoBehaviour:
   CharacterName: Player Bot
   Health: 100
   MaxHealth: 100
-  CharacterAnimator: {fileID: 0}
+  CharacterAnimator: {fileID: 1322025192}
   EquippedAbilities:
   - {fileID: 11400000, guid: 46badd1ce536c78418827f7a623df1db, type: 2}
   - {fileID: 11400000, guid: 829ff3de69da43f4ba81eb010a3a60b7, type: 2}
@@ -2380,10 +2397,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3862277631971027947, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1322025186}
+      addedObject: {fileID: 1322025194}
     - targetCorrespondingSourceObject: {fileID: 3862277631971027947, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1322025194}
+      addedObject: {fileID: 1322025186}
   m_SourcePrefab: {fileID: 100100000, guid: 7ae956b4f54394e80818898d8f4d30c6, type: 3}
 --- !u!224 &1740693271 stripped
 RectTransform:
@@ -2613,7 +2630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068011351}
   m_Layer: 0
-  m_Name: PlayerEnd
+  m_Name: Transform_EnemyPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
