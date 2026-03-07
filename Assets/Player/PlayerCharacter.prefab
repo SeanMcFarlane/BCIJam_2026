@@ -1539,8 +1539,8 @@ MonoBehaviour:
   TurnSpeed: 5
   CharacterAnimator: {fileID: 5615815007780928290}
   NormalArmSFX: {fileID: 8300000, guid: 84072ef21021ff94b9ab6e4bdf0ecabd, type: 3}
-  LaserArmSFX: {fileID: 0}
-  ExplosiveArmSFX: {fileID: 0}
+  LaserArmSFX: {fileID: 8300000, guid: 639a6cc93a2fd8e40aaca3d5c59b7fb0, type: 3}
+  ExplosiveArmSFX: {fileID: 8300000, guid: ec26d6926bd60f046a6c147f5472d789, type: 3}
 --- !u!1 &4072265639379859564
 GameObject:
   m_ObjectHideFlags: 0
