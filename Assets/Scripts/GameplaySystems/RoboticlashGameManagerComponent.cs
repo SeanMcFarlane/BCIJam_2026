@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class RoboticlashGameManagerComponent : MonoBehaviour {
 	public bool IsPlayerTurn = true;
@@ -20,17 +22,23 @@ public class RoboticlashGameManagerComponent : MonoBehaviour {
 
 		if(!IsPlayerTurn) {
 			//Enemy uses a random ability on the player
-			EnemyCharacter.StartUsingAbility(EnemyCharacter.EquippedAbilities[Random.Range(0, EnemyCharacter.EquippedAbilities.Length-1)], PlayerCharacter);
+			StartUsingAbility(EnemyCharacter, EnemyCharacter.EquippedAbilities[Random.Range(0, EnemyCharacter.EquippedAbilities.Length-1)], PlayerCharacter);
 		}
 	}
 
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start() {
-
+	public void StartUsingAbility(BattleCharacter User, CharacterAbility Ability, BattleCharacter Target) {
+		StartCoroutine(PlayAbilityAnimation(User, Ability, Target));
 	}
 
-	// Update is called once per frame
-	void Update() {
+	private IEnumerator PlayAbilityAnimation(BattleCharacter User, CharacterAbility Ability, BattleCharacter Target) {
+		BattleActor abilityUserBattleActor = User.GetComponent<BattleActor>();
+		yield return StartCoroutine(abilityUserBattleActor.AttackRoutine());
+		CompleteUsingAbilityAndApplyEffects(User, Ability, Target);
+	}
 
+	public void CompleteUsingAbilityAndApplyEffects(BattleCharacter User, CharacterAbility Ability, BattleCharacter Target) {
+		Target.Health -= Ability.Damage;
+
+		TriggerNextTurn();
 	}
 }
