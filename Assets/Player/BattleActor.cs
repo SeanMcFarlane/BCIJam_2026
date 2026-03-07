@@ -12,9 +12,13 @@ public class BattleActor : MonoBehaviour
     public float PunchWaitTime = 0.5f;
     public float TurnSpeed = 5f;
     public Animator CharacterAnimator;
+    public AudioClip NormalArmSFX;
+    public AudioClip LaserArmSFX;
+    public AudioClip ExplosiveArmSFX;
 
     private CharacterController _characterController;
     private ThirdPersonController _thirdPersonController;
+    private AudioSource _audioSource;
 
     private static readonly int _animHit = Animator.StringToHash("Hit");
 
@@ -22,6 +26,7 @@ public class BattleActor : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
         _thirdPersonController = GetComponent<ThirdPersonController>();
+        _audioSource = GetComponent<AudioSource>();
 
         transform.position = StartPoint.position;
         transform.rotation = Quaternion.LookRotation(EndPoint.position - StartPoint.position);
@@ -48,6 +53,7 @@ public class BattleActor : MonoBehaviour
 
         // Fire punch animation and notify target
         CharacterAnimator.SetTrigger("Punching");
+        PlayPunchSFX();
         Target?.TakeHit();
         yield return new WaitForSeconds(PunchWaitTime);
 
@@ -93,6 +99,22 @@ public class BattleActor : MonoBehaviour
             yield return null;
         }
         transform.position = target;
+    }
+
+    private void PlayPunchSFX()
+    {
+        if (_audioSource == null) return;
+
+        ArmType arm = PlayerLoadout.Instance != null ? PlayerLoadout.Instance.SelectedArm : ArmType.NormalArm;
+        AudioClip clip = arm switch
+        {
+            ArmType.LaserArm => LaserArmSFX,
+            ArmType.ExplosiveArm => ExplosiveArmSFX,
+            _ => NormalArmSFX
+        };
+
+        if (clip != null)
+            _audioSource.PlayOneShot(clip);
     }
 
     //void Update()

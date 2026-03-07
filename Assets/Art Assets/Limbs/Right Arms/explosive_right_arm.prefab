@@ -550,7 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5407821775425001070}
   m_Layer: 0
-  m_Name: right_arm_2
+  m_Name: explosive_right_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
