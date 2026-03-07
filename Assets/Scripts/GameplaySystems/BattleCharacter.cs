@@ -13,20 +13,6 @@ public class BattleCharacter : MonoBehaviour {
 
 	public CharacterAbility[] EquippedAbilities;
 
-	public void StartUsingAbility(CharacterAbility Ability, BattleCharacter Target) {
-		StartCoroutine(PlayAbilityAnimation(Ability, Target));
-	}
-
-	private IEnumerator PlayAbilityAnimation(CharacterAbility Ability, BattleCharacter Target) {
-		BattleActor battleActor = gameObject.GetComponent<BattleActor>();
-		yield return StartCoroutine(battleActor.AttackRoutine());
-		CompleteUsingAbilityAndApplyEffects(Ability, Target);
-	}
-
-	public void CompleteUsingAbilityAndApplyEffects(CharacterAbility Ability, BattleCharacter Target) {
-		Target.Health -= Ability.Damage;
-	}
-
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start() {
 

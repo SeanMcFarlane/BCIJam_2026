@@ -39,8 +39,8 @@ public class BattleActor : MonoBehaviour
 
     public IEnumerator AttackRoutine()
     {
-        _thirdPersonController.enabled = false;
-        _characterController.enabled = false;
+        if(_thirdPersonController) _thirdPersonController.enabled = false;
+        if(_characterController) _characterController.enabled = false;
 
         // Teleport to start and face the end point
         transform.position = StartPoint.position;
@@ -68,8 +68,8 @@ public class BattleActor : MonoBehaviour
         // Face EndPoint again
         yield return StartCoroutine(RotateToFace(EndPoint.position));
 
-        _characterController.enabled = true;
-        _thirdPersonController.enabled = true;
+        if(_thirdPersonController) _thirdPersonController.enabled = true;
+        if(_characterController) _characterController.enabled = true;
     }
 
     public void TakeHit() {

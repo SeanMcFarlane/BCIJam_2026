@@ -20,7 +20,7 @@ public class CharacterAbilityButton : MonoBehaviour {
 
 	public void HandlePress() {
 		if(GameManager.IsPlayerTurn) {
-			PlayerBattleCharacter.StartUsingAbility(PlayerBattleCharacter.EquippedAbilities[AbilityIndex], EnemyBattleCharacter);
+			GameManager.StartUsingAbility(PlayerBattleCharacter, PlayerBattleCharacter.EquippedAbilities[AbilityIndex], EnemyBattleCharacter);
 		}
 	}
 }
