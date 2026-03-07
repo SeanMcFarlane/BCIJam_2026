@@ -27,7 +27,7 @@ public class BattleActor : MonoBehaviour
         StartCoroutine(AttackRoutine());
     }
 
-    private IEnumerator AttackRoutine()
+    public IEnumerator AttackRoutine()
     {
         _thirdPersonController.enabled = false;
         _characterController.enabled = false;
@@ -86,11 +86,11 @@ public class BattleActor : MonoBehaviour
         transform.position = target;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            PerformAttack();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    {
+    //        PerformAttack();
+    //    }
+    //}
 }

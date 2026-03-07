@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+
 
 public class BattleCharacter : MonoBehaviour {
 	public RectTransform HealthbarFillTransform;
@@ -12,9 +14,12 @@ public class BattleCharacter : MonoBehaviour {
 	public CharacterAbility[] EquippedAbilities;
 
 	public void StartUsingAbility(CharacterAbility Ability, BattleCharacter Target) {
-		//TODO: play animation
+		StartCoroutine(PlayAbilityAnimation(Ability, Target));
+	}
 
-		//TODO: Call this only after the animation completes
+	private IEnumerator PlayAbilityAnimation(CharacterAbility Ability, BattleCharacter Target) {
+		BattleActor battleActor = gameObject.GetComponent<BattleActor>();
+		yield return StartCoroutine(battleActor.AttackRoutine());
 		CompleteUsingAbilityAndApplyEffects(Ability, Target);
 	}
 
