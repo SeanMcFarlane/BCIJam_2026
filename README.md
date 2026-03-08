@@ -3,6 +3,8 @@ BCI Game Jam 2026 Entry
 
 Peter is here
 
+![Gameplay Screenshot](2026-03-07%2015_46_46-BCIJam_2026%20-%20GameplayScene%20-%20Windows%2C%20Mac%2C%20Linux%20-%20Unity%206.3%20LTS%20%286000.3.10f1%29_.png)
+
 ### Attribution
 Models:
 “Free Robo model for personal use” by Rohith A
